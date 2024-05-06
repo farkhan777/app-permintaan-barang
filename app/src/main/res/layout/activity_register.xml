@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="273dp"
+            android:layout_height="138dp"
+            android:layout_marginTop="44dp"
+            android:contentDescription="@string/logo"
+            android:src="@mipmap/ic_gs_foreground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="299dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:padding="5sp"
+            android:text="Username"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usernameBox"
+            android:layout_width="296dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/cardview_stroke"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsername">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="296dp"
+                android:layout_height="55dp"
+                android:layout_margin="1dp"
+                android:autofillHints=""
+                android:background="@android:color/white"
+                android:hint="Masukkan username"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/namaLengkapTextView"
+            android:layout_width="299dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="28dp"
+            android:padding="5sp"
+            android:text="Nama Lengkap"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernameBox" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/namaLengkapBox"
+            android:layout_width="296dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/cardview_stroke"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/namaLengkapTextView">
+
+            <EditText
+                android:id="@+id/namaLengkap"
+                android:layout_width="296dp"
+                android:layout_height="55dp"
+                android:layout_margin="1dp"
+                android:autofillHints=""
+                android:background="@android:color/white"
+                android:hint="Masukkan nama lengkap"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="299dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="28dp"
+            android:padding="5sp"
+            android:text="Email"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/namaLengkapBox" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/emailBox"
+            android:layout_width="296dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/cardview_stroke"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextView">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="296dp"
+                android:layout_height="55dp"
+                android:layout_margin="1dp"
+                android:autofillHints=""
+                android:background="@android:color/white"
+                android:hint="Masukkan email"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/noHpTextView"
+            android:layout_width="299dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="28dp"
+            android:padding="5sp"
+            android:text="No HP"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailBox" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/noHpBox"
+            android:layout_width="296dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/cardview_stroke"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noHpTextView">
+
+            <EditText
+                android:id="@+id/noHp"
+                android:layout_width="296dp"
+                android:layout_height="55dp"
+                android:layout_margin="1dp"
+                android:autofillHints=""
+                android:background="@android:color/white"
+                android:hint="Masukkan no hp"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tanggalLahirTextView"
+            android:layout_width="299dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="28dp"
+            android:padding="5sp"
+            android:text="Tanggal Lahir"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noHpBox" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tanggalLahirBox"
+            android:layout_width="296dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/cardview_stroke"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tanggalLahirTextView">
+
+            <EditText
+                android:id="@+id/tanggalLahir"
+                android:layout_width="296dp"
+                android:layout_height="55dp"
+                android:layout_margin="1dp"
+                android:autofillHints=""
+                android:background="@android:color/white"
+                android:hint="Masukkan tanggal lahir"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:padding="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/alamatTextView"
+            android:layout_width="299dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="28dp"
+            android:padding="5sp"
+            android:text="Alamat"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tanggalLahirBox" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/alamatBox"
+            android:layout_width="296dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/cardview_stroke"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alamatTextView">
+
+            <EditText
+                android:id="@+id/alamat"
+                android:layout_width="296dp"
+                android:layout_height="55dp"
+                android:layout_margin="1dp"
+                android:autofillHints=""
+                android:background="@android:color/white"
+                android:hint="Masukkan alamat"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/passwordTextView"
+            android:layout_width="299dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="28dp"
+            android:padding="5sp"
+            android:text="Password"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alamatBox" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/passwordBox"
+            android:layout_width="296dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/cardview_stroke"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextView">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="296dp"
+                android:layout_height="55dp"
+                android:layout_margin="1dp"
+                android:autofillHints=""
+                android:background="@android:color/white"
+                android:hint="Masukkan password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordBox" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegister">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Sudah punya akun?" />
+
+            <TextView
+                android:id="@+id/login_sekarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login sekarang"
+                android:textColor="@color/teal_700" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
